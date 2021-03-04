@@ -1,0 +1,15 @@
+<h5>
+    Detalhe do contato
+</h5>
+
+<p>Id: {{ contato.id }}</p>
+<p>Nome: {{ contato.nome }}</p>
+<p>Telefone: {{ contato.telefone }}</p>
+
+<a class="waves-effect waves-light btn" 
+  (click)="editarContato()">Editar
+</a>
+{{ ' ' }}
+<a class="waves-effect waves-light btn red" 
+ (click)="deleteContato()">Excluir
+</a>

@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col s6">
+            <p>Lista de contatos:</p>
+            
+            <div class="collection">
+                <a class="collection-item"
+                *ngFor="let contato of contatos"
+                [routerLink]="[contato.id]"
+                >
+                {{ contato.nome }}
+                </a>
+            </div>
+        </div>
+        
+        <div class="col s6">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
