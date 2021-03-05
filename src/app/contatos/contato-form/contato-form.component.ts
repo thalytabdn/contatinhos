@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Contato } from 'src/app/models/Contato';
 import { ContatosService } from '../contatos.service';
@@ -18,6 +18,7 @@ export class ContatoFormComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private contatosService: ContatosService
   ) { }
 
@@ -57,6 +58,7 @@ export class ContatoFormComponent implements OnInit {
   cleanForm(form: NgForm){
     form.resetForm();
     this.contato = {} as Contato;
+    this.router.navigate(['/contatos']);
   }
 
 }
